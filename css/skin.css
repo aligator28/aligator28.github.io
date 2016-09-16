@@ -1,0 +1,75 @@
+/*navbar*/
+.navbar-nav > li > a {
+	transition: all 0.5s;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+/*panels*/
+.panel-primary > .panel-heading {
+	color: #ccc;
+	background: #333;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	background-color: #333;
+	color: #CCC;
+}
+/*panels*/
+.panel-title {
+	text-transform: uppercase;
+}
+.btn, .panel {
+	border-radius: 2px;
+}
+.panel {
+	border: 0;
+}
+/*buttons*/
+.btn {
+	padding: 10px 25px;
+	font-weight: bold;
+	font-size: 0.8em;
+	transition: all 0.5s;
+	position: relative;
+}
+
+.btn-link, .btn-link:hover, .btn-link:focus {
+	color: #d9534f;
+    text-decoration: underline;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all .5s;
+}
+.btn-link:hover, .btn-link:focus {
+	text-decoration: none;
+}
+.btn-default, .btn-danger {
+	text-transform: uppercase;
+}
+.btn-default {
+    color: #bababa;
+    background-color: #fff;
+    border-color: #bababa;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+/*typography*/
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+	color: #454545;
+	font-weight: 600;
+}
+h1 {
+	font-size: 36px;
+	letter-spacing: -1px;
+}
+h2 { font-size: 24px; }
+
+.carousel .item {
+	height: 500px;
+	background-color: #777;
+}

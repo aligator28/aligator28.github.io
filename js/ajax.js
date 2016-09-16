@@ -5,41 +5,41 @@
 
 $(document).ready(function() {
 
+
 	hideLoader();
 
 	$.getJSON('js/pages.json', function(data) {
 		
 
-		$('#content').slideUp('fast', loadPage(data));//
+		showPage(data, page);//
 		
 
 		document.onkeydown = function(event) {
-	
+
 			var currKey = detectKeyCode(event);
 
 	  		if (currKey == keyDown || currKey == keyUp) { // do this script only when pressing up or down buttons
 	
-				var length = 0;
-				for (var key in data) {
-					length++;
-				}
-			
-				if (page < length) {
-					console.log(page+' = '+length);
+				var length = 1;
+				for (var key in data)  
+					length++; 
+				if (page < length) 
 					page = nextPage(page, event);
-					$('#content').slideUp('fast', loadPage(data, page));
-					$('#load').fadeIn('normal');
-				} else {
+				if (page >= length) 
 					page = 1;
-					$('#content').slideUp('fast', loadPage(data, page));
-					$('#load').fadeIn('normal');
-				}
+
+				showPage(data, page);
 	  		}
 	  	};
 	});
 });
 
-function nextPage(currPage = 1, event) {
+function showPage(data, page) {
+	$('#content').fadeTo( 'fast', .5, loadPage(data, page) );
+	$('#load').fadeIn('normal');
+}
+
+function nextPage (currPage, event) {
 
 	var nextPage = 1;
 	var currKey = detectKeyCode(event);
@@ -63,26 +63,26 @@ function detectKeyCode(event) {
 
 	var keycode;
 	if(!event) var event = window.event;
-  if (event.keyCode) keycode = event.keyCode; // IE
-  else if(event.which) keycode = event.which; // all browsers
+	if (event.keyCode) keycode = event.keyCode; // IE
+	else if(event.which) keycode = event.which; // all browsers
   
-  return keycode;
+	return keycode;
 }
 
 //////////////////////// AJAX //////////////////////
 
-function loadPage(data, page = 1) {
-
+function loadPage(data, page) {
 	$.each(data, function(key, href) {
 		if (page == key) {
 			$('#content').load(href, '', showNewContent);
 		}
 	});
+}
 
-}
 function showNewContent() {
-	$('#content').slideDown('fast', hideLoader());
+	$('#content').fadeTo('fast', 1, hideLoader());
 }
+
 function hideLoader() {
 	$('#load').fadeOut('normal');
 }

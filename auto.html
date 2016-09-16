@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Заголовок</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Bootstrap -->
+	<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+	<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/skin.css">
+	<link rel="stylesheet" type="text/css" href="libs/datepicker/pikaday.css">
+	<!-- font awesome -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+	<!-- Header CSS (First Sections of Website: paste after release from header.min.css here) -->
+	<!-- СЮДА ВСТАВЛЯЕМ СТИЛИ ДЛЯ ПЕРВОГО ЭКРАНА САЙТА (ПЕРВОЙ ГЛАВНОЙ СТРАНИЦЫ)
+	ЧТОБЫ САЙТ СРАЗУ НАЧАЛ ОТОБРАЖАТЬСЯ КОРРЕКТНО -->
+	<style></style>
+	<link rel="stylesheet" type="text/css" href="css/header.min.css">
+
+	<!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
+	<script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
+
+	<!-- Load CSS Start -->
+	<script>loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" );</script>
+	<script>loadCSS( "css/header.min.css?ver=1.0.0", false, "all" );</script>
+	<script>loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );</script>
+	<!-- Load CSS End -->
+
+	<!-- Load CSS Compiled without JS -->
+	<noscript>
+		<link rel="stylesheet" href="css/fonts.min.css">
+		<link rel="stylesheet" href="css/main.min.css">
+	</noscript>
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="top row">
+				<div class="col-sm-4 logo">
+					<a href="index.html">
+						<img src="img/logo.png" alt="Логотип">
+						<h6>школа детейлинга</h6>
+					</a>
+				</div>
+				<div class="col-sm-4 socials">
+					<p>Присоединяйтесь к нам:</p>
+					<a class="invert-social" href="http://instagram.com/"><i class="fa-inverse fa fa-instagram"></i></a>
+					<a class="invert-social" href="http://vk.com/"><i class="fa-inverse fa-2x fa fa-vk"></i></a>
+					<a class="invert-social" href="http://facebook.com/"><i class="fa-inverse fa-2x fa fa-facebook"></i></a>
+					<a class="invert-social" href="http://youtube.com/"><i class="fa-inverse fa-2x fa fa-youtube"></i></a>
+				</div>
+				<div class="col-sm-4 ask">
+					<a href="#" class="btn btn-danger ask-question">Задать вопрос</a>
+				</div>
+			</div>
+			<!-- nav -->
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Главная <span class="sr-only">(current)</span></a></li>
+							<li><a href="#">О нас</a></li>
+							<li><a href="#">Обучение</a></li>
+							<li><a href="#">Публикации</a></li>
+							<li><a href="#">Отзывы</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#"><i class="fa fa-phone-square"></i> 8 (800) 000 0000</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- nav ends -->
+			<div class="slider">
+				<div class="s-header">
+					<h1>Комплексное обучение детейлингу</h1>
+					<p>numquam dicta corporis numquam dicta corporis numquam dicta corporis consectetur illo, debitis doloremque architecto tenetur.</p>
+				</div>
+				<div class="row">
+					<div class="col-sm-8">
+						<div id="myCarousel" class="carousel slide" data-ride="carousel">
+							<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+								<li data-target="#myCarousel" data-slide-to="1"></li>
+								<li class="" data-target="#myCarousel" data-slide-to="2"></li>
+							</ol>
+							<div class="carousel-inner" role="listbox">
+								<div class="item active">
+									<img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+									<div class="container">
+										<div class="carousel-caption">
+											<h2>Обучение реставрации салонов автомобилей</h2>
+											<ul>
+												<li>Курсы повышения квалификации для специалистов по реставрации салонов</li>
+												<li>Обучение реставрации автомобиля с "нуля"</li>
+											</ul>
+											<p><a class="btn btn-danger details-button" href="#" role="button">Узнать подробности</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+									<div class="container">
+										<div class="carousel-caption">
+											<h1>Another example headline.</h1>
+											<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+											<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+									<div class="container">
+										<div class="carousel-caption">
+											<h1>One more for good measure.</h1>
+											<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+											<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+						<!-- /.carousel -->
+					</div>
+					<div class="col-sm-4">
+						<div class="panel panel-primary study-column">
+							<div class="panel-heading">
+								<h3 class="panel-title">Обучение по направлениям</h3>
+							</div>
+							<div class="panel-body">
+								<ul class="study-list">
+									<li><a href="">Lorem dolor ipsum dolor</a></li>
+									<li><a href="">Lorem ipsum </a></li>
+									<li><a href="">Lorem ipsum dolor</a></li>
+									<li class="study-list__active"><a href="">Lorem ipsum dolor</a></li>
+									<li><a href="">Lorem ipsum dolor dolor</a></li>
+									<li><a href="">dolordolor ipsum dolor</a></li>
+									<li><a href="">Lorem ipsum dolor</a></li>
+									<li><a href="">Loremdolor ipsum dolor</a></li>
+									<li><a href=""> ipsum dolor</a></li>
+									<li><a href="">Lorem ipsum dolor</a></li>
+									<li><a href="">Loremdolor ipsum dolor</a></li>
+									<li><a href="">Lorem ipsum dolor</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header ends -->
+
+
+
+
+
+
+		<!-- main content -->
+		<section id="main" class="main-content">
+			<div class="row">
+				<div class="col-sm-4 news">
+					<div class="panel panel-primary news-items">
+						<div class="panel-heading">
+							<h3 class="panel-title">Последние новости</h3>
+						</div>
+						<div class="panel-body">
+							<div class="news-item">
+								<h4>Lorem ipsum dolor sit amet.</h4>
+								<p>Repudiandae ad impedit nostrum quod Repudiandae ad impedit nostrum quodRepudiandae ad impedit nostrum quodRepudiandae ad impedit nostrum quod, quia molestiae, quaerat quidem. Vel aspernatur magni incidunt nesciunt repellendus. Autem, error.</p>
+								<p>
+									<span class="date">03/04/16</span>
+									<span class="read-more"><a href="" class="btn-link">Читать далее</a></span>
+								</p>
+							</div>
+							<div class="news-item">
+								<h4>Lorem ipsum dolor sit amet.</h4>
+								<p>Repudiandae ad impedit nostrum quod, quia molestiae, quaerat quidem. Vel aspernatur magni incidunt nesciunt repellendus. Autem, error.</p>
+								<p>
+									<span class="date">03/04/16</span>
+									<span class="read-more"><a href="" class="btn-link">Читать далее</a></span>
+								</p>
+							</div>
+							<div class="news-item">
+								<h4>Lorem ipsum dolor sit amet.</h4>
+								<p>Repudiandae ad impedit nostrum quod, quia molestiae, quaerat quidem. Vel aspernatur magni incidunt nesciunt repellendus. Autem, error.</p>
+								<p>
+									<span class="date">03/04/16</span>
+									<span class="read-more"><a href="" class="btn-link">Читать далее</a></span>
+								</p>
+							</div>
+							<div class="all-items"><a href="#" class="btn btn-default">Все новости</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 news">
+					<div class="panel panel-primary news-items">
+						<div class="panel-heading">
+							<h3 class="panel-title">Ближайшие вебинары</h3>
+						</div>
+						<div class="panel-body">
+							<div class="news-item">
+								<h4>Lorem ipsum dolor sit amet.</h4>
+								<p>od, quia molestiae, quaerat quidem. Vel aspernatur magni incidunt nesciunt repellendus. Autem, error.</p>
+								<p>
+									<span class="date">03/04/16</span>
+									<span class="read-more"><a href="" class="btn-link">Читать далее</a></span>
+								</p>
+							</div>
+							<div class="news-item">
+								<h4>Lorem ipsum dolor sit amet.</h4>
+								<p>oRepudiandae ad impedit nostrum quodRepudiandae ad impedit nostrum quodRepudiandae ad impedit nostrum quodd, quia molestiae, quaerat quidem. Vel aspernatur magni incidunt nesciunt repellendus. Autem, error.</p>
+								<p>
+									<span class="date">03/04/16</span>
+									<span class="read-more"><a class="btn-link">Читать далее</a></span>
+								</p>
+							</div>
+							<div class="news-item">
+								<h4>Lorem ipsum dolor sit amet.</h4>
+								<p>od, quia molestiae, quaerat quidem. Vel aspernatur magni incidunt nesciunt repellendus. Autem, error.</p>
+								<p>
+									<span class="date">03/04/16</span>
+									<span class="read-more"><a class="btn-link">Читать далее</a></span>
+								</p>
+							</div>
+							<div class="all-items"><a href="#" class="btn btn-default">Все вебинары</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 news">
+					<div class="panel panel-primary news-items">
+						<div class="panel-heading">
+							<h3 class="panel-title">Новые статьи</h3>
+						</div>
+						<div class="panel-body">
+							<div class="news-item">
+								<h4>Lorem ipsum dolor sit amet.</h4>
+								<p>Repudiandae ad impedit nostrum quod, quia molestiae, quaerat quidem. Vel aspernatur magni incidunt nesciunt repellendus. Autem, error.</p>
+								<p>
+									<span class="date">03/04/16</span>
+									<span class="read-more"><a class="btn-link">Читать далее</a></span>
+								</p>
+							</div>
+							<div class="news-item">
+								<h4>Lorem ipsum dolor sit amet.</h4>
+								<p>Repudiandae ad impedit nostrum quod, quia molestiae, quaerat quidem. Vel aspernatur magni incidunt nesciunt repellendus. Autem, error.</p>
+								<p>
+									<span class="date">03/04/16</span>
+									<span class="read-more"><a class="btn-link">Читать далее</a></span>
+								</p>
+							</div>
+							<div class="news-item">
+								<h4>Lorem ipsum dolor sit amet.</h4>
+								<p>Repudiandae Repudiandae ad impedit nostrum quodRepudiandae ad impedit nostrum quodRepudiandae ad impedit nostrum quod ad impedit nostrum quod, quia molestiae, quaerat quidem. Vel aspernatur magni incidunt nesciunt repellendus. Autem, error.</p>
+								<p>
+									<span class="date">03/04/16</span>
+									<span class="read-more"><a class="btn-link">Читать далее</a></span>
+								</p>
+							</div>
+							<div class="all-items"><a href="#" class="btn btn-default">Все статьи</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<!-- page 3 -->
+			<div class="row income-more">
+				<div class="col-sm-12">
+					<h2>Начните <span>зарабатывать больше</span> на красоте автомобилей</h2>
+					<p>вы можете заниматься любимым деломо и получать за это деньги</p>
+				</div>
+			</div>
+			<div class="row income-more-content">
+				<div class="col-sm-6">
+					<img class="img-responsive" src="img/merc-morda.jpg" alt="Мерседес">
+				</div>
+				<div class="col-sm-6">
+					<h2>Что же такое детейлинг?</h2>
+					<hr>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptates nihil in at excepturi, vel reprehenderit quo! Perspiciatis eum nobis totam, earum doloremque, dolorum perferendis tempore, praesentium molestias magni voluptas.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, iusto?</p>
+					<h2>Несколько фактов</h2>
+					<hr>
+					<div class="fact row">
+						<div class="col-sm-2 amount">
+							<p>xxx</p>
+						</div>
+						<div class="col-sm-10">
+							<p>Sint molestiae soluta aliquid accusamus deserunt nulla.</p>
+						</div>
+					</div>
+					<div class="fact row">
+						<div class="col-sm-2 amount">
+							<p>xxx</p>
+						</div>
+						<div class="col-sm-10">
+							<p>Sint molestiae soluta aliquid accusamus deserunt nulla.</p>
+						</div>
+					</div>
+					<div class="fact row">
+						<div class="col-sm-2 amount">
+							<p>xxx</p>
+						</div>
+						<div class="col-sm-10">
+							<p>Sint molestiae soluta aliquid accusamus deserunt nulla. Sint molestiae soluta aliquid accusamus deserunt nulla.</p>
+						</div>
+					</div>
+					<hr>
+					<p>*данные могут отличаться в зависимости от региона, цен на услуги расходной части вашего бизнеса</p>
+					<div class="additional"><a href="#" class="btn btn-danger earn-details">Узнать подробности</a></div>
+				</div>
+			</div>
+
+
+
+<!-- page 4 -->
+			<div class="row two-minutes">
+				<div class="col-sm-12">
+					<h2>Узнайте о нас за <span>2 минуты</span></h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus mollitia deleniti, tenetur ducimus eos quasi nemo reiciendis sunt aperiam, repellat? Sunt doloribus facere a nesciunt, nisi iusto ipsam molestias eum. Enim sit nulla eaque laudantium nobis minus eos iure, consequatur quas voluptas necessitatibus dolorem, a, sed porro deserunt autem quia ea placeat. Accusamus ad ducimus veritatis, dolor perspiciatis cumque atque.</p>
+				</div>
+			</div>
+			<div class="two-minutes-content">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="col-sm-6">
+							<p>Aliquam Doloremque laboriosam delectus cumque. Odio ex consequatur quis laudantium vero, amet, odit assumenda optio magni blanditiis possimus cupiditate, repellat veniam minus eligendi corporis voluptatibus placeat dignissimos distinctio a porro, neque saepe! Quasi ut modi mollitia animi. Officiis dolore ducimus id earum facilis libero, dignissimos ex.</p>
+							<p class="name">Алена Гулевич</p>
+							<p class="proffession">управляющая детейлинг центром "Фест"</p>
+							<p> inventore consequatur debitis ex id corrupti officiis! Magni ullam error adipisci modi sit, iste quis beatae soluta non accusamus. Doloremque laboriosam delectus cumque. Odio ex consequatur quis laudantium vero, amet, odit assumenda optio magni blanditiis possimus cupiditate, repellat veniam minus eligendi corporis voluptatibus placeat dignissimos distinctio a porro, neque saepe! Quasi ut modi mollitia animi. Officiis dolore ducimus id earum facilis libero, dignissimos ex.</p>
+							<p class="name">Алена Гулевич</p>
+							<p class="proffession">управляющая детейлинг центром "Фест"</p>
+						</div>
+						<div class="col-sm-6">
+							<img src="img/video.jpg" alt="video" class="img-responsive">
+						</div>
+						<div class="row">
+							<div class="col-sm-12 read-details">
+								<p>Прочитайте подробности о нашем центре</p>
+								<a href="#" class="btn btn-danger read-btn">Читать</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<!-- page 5 -->
+			<div class="row effective-study">
+				<div class="col-sm-12">
+					<h2>Все, что необходимо <span>для эффективного</span> обучения детейлингу</h2>
+					<p>Sunt nulla eaque laudantium nobis minus eos iure, consequatur quas voluptas necessitatibus dolorem, a, sed porro deserunt autem quia ea placeat. Accusamus ad ducimus veritatis, dolor perspiciatis cumque atque.</p>
+				</div>
+			</div>
+			<div class="row effective-study-content">
+				<div class="col-sm-3 item">
+					<div class="panel panel-default panel-hover">
+						<div class="panel-body">
+							<img src="img/book.png" alt="Книги">
+							<p>Книги и обучающие материалы</p>
+							<div class="img-bg"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3 item">
+					<div class="panel panel-default panel-hover">
+						<div class="panel-body">
+							<div class="img-bg"></div>
+							<img src="img/comp.png" alt="Вебинары и видео">
+							<p>Обучающие вебинары и видео-курсы</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3 item">
+					<div class="panel panel-default panel-hover">
+						<div class="panel-body">
+							<div class="img-bg"></div>
+							<img src="img/auto.png" alt="Курсы для персонала">
+							<p>Курсы повышения квалификации персонала детейлинг-центров</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3 item">
+					<div class="panel panel-default panel-hover">
+						<div class="panel-body">
+							<div class="img-bg"></div>
+							<img src="img/man.png" alt="Курсы для руководителей">
+							<p>Тренинги и курсы для руководителей детейлинг-центров</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 look-programms">
+					<a href="#" class="btn btn-danger">Посмотреть программы</a>
+				</div>
+			</div>
+
+
+
+
+<!-- page 6 -->
+			<div class="effective-study second">
+				<div class="row">
+					<div class="col-sm-12">
+						<h2>Все, что необходимо <span>для эффективного</span> обучения детейлингу</h2>
+						<p>Sunt nulla eaque laudantium nobis minus eos iure, consequatur quas voluptas necessitatibus dolorem, a, sed porro deserunt autem quia ea placeat. Accusamus ad ducimus veritatis, dolor perspiciatis cumque atque.</p>
+					</div>
+				</div>
+				<div class="row form">
+					<form action="index.html" id="sing-in-form">
+						<div class="col-sm-4 col-sm-offset-4">
+							<select class="form-control services" multiple name="services" id="services">
+								<option class="opt">Полировка ЛКП автомобиля</option>
+								<option class="opt">Химчистка салона</option>
+								<option class="opt">Защитная оклейка</option>
+								<option class="opt">Нанесение защитных составов</option>
+								<option class="opt">Реставрация кожаных поверхностей</option>
+								<option class="opt">Реставрация салона</option>
+								<option class="opt">Перетяжка салона</option>
+								<option class="opt">Перетяжка руля</option>
+								<option class="opt">Локальная покраска</option>
+								<option class="opt">Удаление вмятин без покраски</option>
+								<option class="opt">Повышение эффективности ДЦ</option>
+								<option class="opt">Как открыть детейлинг-центр</option>
+							</select>
+							<div class="row date-container">
+								<label class="col-sm-6" for="datepicker">Удобная дата: </label>
+								<input class="form-control col-sm-6 pull-right input-date" type="date" name="datepicker" id="datepicker" />
+							</div>
+						</div>
+						<div class="col-sm-4 form-2">
+							<h3>Заполните форму</h3>
+							<div class="form-group">
+								<label for="name">Ваше имя</label>
+								<input class="form-control" type="text" name="name" id="name" placeholder="Ваше имя">
+							</div>
+							<div class="form-group">
+								<label for="phone">Ваш телефон</label>
+								<input class="form-control" type="tel" name="phone" id="phone" placeholder="+38(099) 000-0000">
+							</div>
+							<div class="form-group">
+								<label for="email">Ваш e-mail</label>
+								<input class="form-control" type="email" name="email" id="email" placeholder="email@email.com">
+							</div>
+							<div class="sing-in"><input type="submit" class="btn btn-danger form-control" value="Записаться" /></div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+
+
+
+<!-- page 7 -->
+			<div class="row geography">
+				<div class="col-sm-12">
+					<h2><span>Широкая</span> география работы</h2>
+					<p>Наши выпускники работают в ХХ городах России и ближнего зарубежья</p>
+					<div class="map">
+						<img class="img-responsive" src="img/map.jpg" alt="Карта России">
+						<h2>Некоторые из них:</h2>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At praesentium sapiente voluptatem, ea quaerat omnis qui recusandae error incidunt! Labore voluptatum, quos consequatur temporibus doloribus repudiandae recusandae nihil dolore unde, animi natus consequuntur nam quod eligendi modi aliquid sit. Voluptatem quasi explicabo maxime exercitationem, nisi, iste adipisci natus temporibus perferendis omnis deserunt fugiat obcaecati consequuntur.</p>
+						<a href="#" class="btn btn-danger">Присоединиться</a>
+					</div>
+				</div>
+			</div>
+
+
+<!-- page 8 -->
+			<div class="row about">
+				<div class="col-sm-12">
+					<h2><span>О нас</span> говорят</h2>
+					<p>Об обучающем центре "Фест" говорят как СМИ, так и профессиональные круги</p>
+				</div>
+			</div>
+			<div class="row about-content">
+				<div class="col-sm-6">
+					<div class="panel panel-primary news-items">
+						<div class="panel-heading">
+							<h3 class="panel-title">Публикации в СМИ</h3>
+						</div>
+						<div class="panel-body">
+							<div class="news-item">
+								<h4>Lorem ipsum dolor sit amet.</h4>
+								<p>Repudiandae ad impedit nostrum quod Repudiandae ad impedit nostrum quodRepudiandae ad impedit nostrum quodRepudiandae ad impedit nostrum quod, quia molestiae, quaerat quidem. Vel aspernatur magni incidunt nesciunt repellendus. Autem, error.</p>
+								<p>
+									<span class="date">03/04/16</span>
+									<span class="read-more"><a href="" class="btn-link">Читать далее</a></span>
+								</p>
+							</div>
+							<div class="news-item">
+								<h4>Lorem ipsum dolor sit amet.</h4>
+								<p>Repudiandae ad impedit nostrum quod, quia molestiae, quaerat quidem. Vel aspernatur magni incidunt nesciunt repellendus. Autem, error.</p>
+								<p>
+									<span class="date">03/04/16</span>
+									<span class="read-more"><a href="" class="btn-link">Читать далее</a></span>
+								</p>
+							</div>
+							<div class="all-items"><a href="#" class="btn btn-default">Все публикации</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="panel panel-primary news-items">
+						<div class="panel-heading">
+							<h3 class="panel-title">Отзывы</h3>
+						</div>
+						<div class="panel-body">
+							<div class="news-item">
+								<h4>Lorem ipsum dolor sit amet.</h4>
+								<p>Repudiandae ad impedit nostrum quod Repudiandae ad impedit nostrum quodRepudiandae ad impedit nostrum quodRepudiandae ad impedit nostrum quod, quia molestiae, quaerat quidem. Vel aspernatur magni incidunt nesciunt repellendus. Autem, error.</p>
+								<p>
+									<span class="date">03/04/16</span>
+									<span class="read-more"><a href="" class="btn-link">Читать далее</a></span>
+								</p>
+							</div>
+							<div class="news-item">
+								<h4>Lorem ipsum dolor sit amet.</h4>
+								<p>Repudiandae ad impedit nostrum quod, quia molestiae, quaerat quidem. Vel aspernatur magni incidunt nesciunt repellendus. Autem, error.</p>
+								<p>
+									<span class="date">03/04/16</span>
+									<span class="read-more"><a href="" class="btn-link">Читать далее</a></span>
+								</p>
+							</div>
+							<div class="all-items"><a href="#" class="btn btn-default">Все отзывы</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<div class="row contacts">
+				<div class="col-sm-12">
+					<h2>Контакты</h2>
+				</div>
+			</div>
+			<div class="row contacts-all">
+				<div class="col-sm-3 contact-item">
+					<i class="fa fa-map-marker"></i>
+					<p>г.Кемерово ул.Баумана, 4а</p>
+				</div>
+				<div class="col-sm-3 contact-item">
+					<i class="fa fa-clock-o"></i>
+					<p>пн-пт с 9.00 до 19.00</p>
+				</div>
+				<div class="col-sm-3 contact-item">
+					<i class="fa fa-mobile"></i>
+					<p>8 (800) 000-0000</p>
+				</div>
+				<div class="col-sm-3 contact-item">
+					<i class="fa fa-envelope-o"></i>
+					<p>mail@mail.com</p>
+				</div>
+			</div>
+			<div class="row street-map">
+				<div class="col-sm-12">
+					<img class="img-responsive" src="img/street-map.jpg" alt="г.Кемерово ул.Баумана, 4а">
+				</div>
+			</div>
+		</section>
+
+		
+		<footer>
+			<div class="row">
+				<div class="col-sm-1">
+					<ul>
+						<li><a href="#">Главная</a></li>
+						<li><a href="">О нас</a></li>
+						<li><a href="">Отзывы</a></li>
+						<li><a href="">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-4 lists">
+					<h5>Обучение</h5>
+					<ul>
+						<li>Lorem ipsum</li>
+						<li>Lorem ipsum</li>
+						<li>Lorem ipsum</li>
+						<li>Lorem ipsum</li>
+					</ul>
+				</div>
+				<div class="col-sm-4 lists">
+					<h5>Публикации</h5>
+					<ul>
+						<li>Lorem ipsum</li>
+						<li>Lorem ipsum</li>
+						<li>Lorem ipsum</li>
+						<li>Lorem ipsum</li>
+					</ul>
+				</div>
+				<div class="top footer-contacts">
+					<div class="col-sm-3 logo">
+						<a href="index.html">
+							<img src="img/logo.png" alt="Логотип">
+							<h6>школа детейлинга</h6>
+						</a>
+						<ul class="">
+							<li><a href="#"><i class="fa fa-phone-square"></i> 8 (800) 000 0000</a></li>
+							<li><a href="#"><i class="fa fa-phone-square"></i>г.Кемерово ул.Баумана, 4а</a></li>
+						</ul>
+						<div class="socials">
+							<p>Присоединяйтесь к нам:</p>
+							<a class="invert-social" href="http://instagram.com/"><i class="fa-inverse fa fa-instagram"></i></a>
+							<a class="invert-social" href="http://vk.com/"><i class="fa-inverse fa-2x fa fa-vk"></i></a>
+							<a class="invert-social" href="http://facebook.com/"><i class="fa-inverse fa-2x fa fa-facebook"></i></a>
+							<a class="invert-social" href="http://youtube.com/"><i class="fa-inverse fa-2x fa fa-youtube"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- main content ends -->
+	<div class="hidden"></div>
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Load Scripts Start -->
+	<script>var scr = {"scripts":[
+		{"src" : "js/libs.js", "async" : false},
+		{"src" : "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", "async" : false},
+		{"src" : "js/common.js", "async" : false}
+		]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+	</script>
+	<!-- Load Scripts End -->
+	<script type="text/javascript" src="libs/datepicker/pikaday.js"></script>
+</body>
+</html>
