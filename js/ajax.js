@@ -5,13 +5,14 @@
 
 $(document).ready(function() {
 
-
 	hideLoader();
+
+	moveLines();
 
 	$.getJSON('js/pages.json', function(data) {
 		
 
-		showPage(data, page);//
+		showPage(data, 3000, page);//
 		
 
 		document.onkeydown = function(event) {
@@ -28,14 +29,17 @@ $(document).ready(function() {
 				if (page >= length) 
 					page = 1;
 
-				showPage(data, page);
+				showPage(data, 0, page);
 	  		}
 	  	};
 	});
 });
 
-function showPage(data, page) {
-	$('#content').fadeTo( 'fast', .5, loadPage(data, page) );
+function showPage(data, delay, page) {
+	$('#content').css('opacity', 0);
+	loadPage(data, page);
+	
+	$('#content').delay(delay).fadeTo('slow', 1, hideLoader());
 	$('#load').fadeIn('normal');
 }
 
@@ -74,14 +78,11 @@ function detectKeyCode(event) {
 function loadPage(data, page) {
 	$.each(data, function(key, href) {
 		if (page == key) {
-			$('#content').load(href, '', showNewContent);
+			$('#content').load(href);
 		}
 	});
 }
 
-function showNewContent() {
-	$('#content').fadeTo('fast', 1, hideLoader());
-}
 
 function hideLoader() {
 	$('#load').fadeOut('normal');

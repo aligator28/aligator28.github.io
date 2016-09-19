@@ -17,6 +17,40 @@ html, body {
 	/*border: 3px solid red;*/
 }
 
+.lines-container {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+.lines {
+	height: 100%;
+	position: absolute;
+	width: 50px;
+	z-index: 9999;
+	opacity: 0;
+}
+.left {
+	left: -50px;
+}
+.right {
+	right: -50px;
+}
+.red, .red2 {
+	background: #9B0629;
+}
+.gray {
+	background: gray;
+}
+.gray2 {
+	background: #4E4E4E;
+}
+.black {
+	background: #3B3A3A;
+}
+.white, .white2 {
+	background: white;
+}
+
 .loader {
 	display: block;
 	font-size: 20px;
