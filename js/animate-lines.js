@@ -1,4 +1,5 @@
 function moveLines() {
+
 	buildLine('gray2', 'left');
 	animateLeftLines($('#gray2'), '65%', '700px', .3, 200, 800);
 	buildLine('red', 'left');
@@ -15,7 +16,7 @@ function moveLines() {
 	animateRightLines($('#white'), '91%', '50px', 1, 300, 1500);
 
 	//remove lines
-	animateLeftLines($('#red'), '-250px', '250px', 0, 1000, 1000);
+	animateLeftLines($('#red'), '-250px', '250px', 0, 400, 1000);
 	animateLeftLines($('#gray2'), '-100px', '50px', 0, 2000, 1000);
 	animateLeftLines($('#gray'), '-50px', '500px', 0, 200, 2400);
 	
@@ -24,6 +25,11 @@ function moveLines() {
 	animateLeftLines($('#red2'), '-850px', '850px', .7, 1000, 2000);
 
 }
+
+function car() {
+	$('#lines-container').append('<div class="car" id="car"></div>');
+}
+
 function animateLeftLines(elem, pos, width, opa, del, dur) {
 
 	elem.delay(del).animate({

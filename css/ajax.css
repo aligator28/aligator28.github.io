@@ -2,19 +2,23 @@ html, body {
 	height: 100%;
 	width: 100%;
 	margin: 0;
+	background: url('../img/fara.jpg') no-repeat;
 }
 
 #content {
 	position: relative;
 	height: 100%;
+	background: rgba(255, 255, 255, .8);
+	width: 80%;
+	margin: 0 auto;
 }
 .pages {
+	padding: 20px 0;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 100%;
-	/*border: 3px solid red;*/
+	width: 90%;
 }
 
 .lines-container {
@@ -56,4 +60,16 @@ html, body {
 	font-size: 20px;
 	text-align: center;
 	color: #71426B;
+}
+.arrow {
+	position: fixed;
+	width: 20%;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 1%;
+	margin: 0 auto;
+	color: #363535;
+}
+.arrow span {
+	font-size: 24px;
 }
