@@ -1,0 +1,204 @@
+.black-form {
+  background: #0C1715;
+  overflow: hidden;
+  padding: 50px 50px 100px;
+  position: relative;
+  z-index: 1; }
+  .black-form:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    left: -10px;
+    height: 50px;
+    width: 105%;
+    background: url("../img/works/pattern3.png");
+    -webkit-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg); }
+
+.form-header .col-sm-12 {
+  text-align: center; }
+
+.form-header-item {
+  position: relative;
+  top: 10px;
+  z-index: 0;
+  display: inline-block;
+  background: #A70101;
+  width: 20%;
+  height: 90px;
+  padding: 20px 0;
+  margin-right: 5px;
+  background: rgba(167, 1, 1, 0.7);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s; }
+  .form-header-item label {
+    color: #fff;
+    width: 100%; }
+  .form-header-item:hover {
+    top: 0;
+    background: #a70101; }
+    .form-header-item:hover .type-lbl {
+      background-position: center -8px; }
+    .form-header-item:hover .budget {
+      background-image: url("../img/budget-y.png"); }
+    .form-header-item:hover .airport {
+      background-image: url("../img/airport-y.png");
+      background-position: center -2px; }
+    .form-header-item:hover .truck {
+      background-image: url("../img/truck-y.png"); }
+    .form-header-item:hover .personal {
+      background-image: url("../img/personal-y.png"); }
+    .form-header-item:hover span {
+      color: #FFB900; }
+
+.radio:checked + .form-header-item > label > span {
+  color: #FFB900; }
+
+.radio:checked + .form-header-item {
+  background-color: #A70101;
+  background-image: -webkit-linear-gradient(top, #A70101 20%, #0C1715 150%);
+  background-image: -webkit-gradient(linear,left top, left bottom,color-stop(20%, #A70101), color-stop(150%, #0C1715));
+  background-image: -webkit-linear-gradient(top,#A70101 20%, #0C1715 150%);
+  background-image: linear-gradient(to bottom,#A70101 20%, #0C1715 150%);
+  top: 0; }
+
+.radio:checked + .form-header-item > .personal {
+  background-image: url("../img/personal-y.png"); }
+
+.radio:checked + .form-header-item > .budget {
+  background-image: url("../img/budget-y.png"); }
+
+.radio:checked + .form-header-item > .airport {
+  background-image: url("../img/airport-y.png"); }
+
+.radio:checked + .form-header-item > .truck {
+  background-image: url("../img/truck-y.png"); }
+
+.form-lines {
+  padding: 20px 0; }
+  .form-lines div {
+    position: relative; }
+
+.form-lines-label {
+  margin: 0 15px;
+  color: #A2A1A1; }
+  .form-lines-label.date-time-lbl {
+    margin-left: 0; }
+  .form-lines-label .book-input {
+    right: inherit; }
+  .form-lines-label .map-btn {
+    position: relative; }
+
+.form-pass-amount {
+  height: 50px;
+  width: 50%; }
+
+.form-num-input {
+  width: 60px;
+  background: #000;
+  border: none;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 5px; }
+
+input[type=number].form-num-input {
+  -webkit-appearance: initial;
+  -moz-appearance: initial;
+  appearance: initial; }
+
+.form-addres label {
+  display: inline-block; }
+
+.form-addres-container {
+  color: #fff;
+  border: none;
+  background: #0C1715;
+  display: block;
+  width: 100%;
+  margin-top: 20px; }
+
+.error {
+  color: #A70101;
+  padding: 5px;
+  position: absolute; }
+
+.input-error {
+  background-color: #A70101; }
+
+#booking-errors {
+  height: 35px; }
+
+/*==========  Desktop First Method  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  /**/ }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  /**/
+  .serv2-container {
+    top: 250px; } }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  /**/
+  .serv2-container {
+    top: 300px; }
+  .radio {
+    position: absolute; }
+  .map-modal {
+    width: 100%; }
+  .map-container {
+    width: 400px; }
+  .loc-line p {
+    width: 40%;
+    font-size: 12px; }
+  .loc-line label {
+    font-size: 14px; } }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  /**/
+  .skew-bg-bottom {
+    height: 700px; }
+  .serv2-container {
+    max-width: 90%; }
+  .form-lines {
+    padding: 10px 0; }
+    .form-lines:first-child {
+      padding: 0; }
+  .form-pass-amount {
+    display: inline; }
+  .black-form {
+    padding: 30px 20px 100px; }
+  .type-lbl {
+    margin-left: 0; } }
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  /**/ }
+
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  /**/ }
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  /**/ }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  /**/ }
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  /**/ }
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  /**/ }

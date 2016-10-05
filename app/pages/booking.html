@@ -1,0 +1,123 @@
+<!-- booking begins -->
+<link rel="stylesheet" type="text/css" href="css/booking.min.css">
+<link rel="stylesheet" type="text/css" href="libs/pikaday/css/pikaday.css">
+
+<div class="serv2-container">
+	<div class="row serv2-header">
+		<div class="col-sm-12 serv2-title">Book a Cab</div>
+		<div class="col-sm-12 serv2-bread">
+			<a href="" class="serv2-bread-link">Home</a>
+			<a href="" class="serv2-bread-link active">Book a Cab</a>
+		</div>
+	</div>
+	
+
+<!-- modal for map FROM -->
+<div class="map-modal" id="from-map-modal">
+	<div class="loc-line">
+		<p>Drag the pointer to select your location. Or type the location in the field below. Press OK to hide the map.</p>
+		<form action="#">
+			<label for="location">Location:</label>
+			<input type="text" class="loc-input" name="location" required id="from-location">
+			<input type="submit" id="from-submit" name="submit" class="book-submit loc-sbmt" value="Ok">
+		</form>
+	</div>
+	<div id="from-map-container" class="map-container"></div>
+</div>
+<!-- modal for map FROM ends-->
+<!-- modal for map TO -->
+<div class="map-modal" id="to-map-modal">
+	<div class="loc-line">
+		<p>Drag the pointer to select your location. Or type the location in the field below. Press OK to hide the map.</p>
+		<form action="#">
+			<label for="location">Location:</label>
+			<input type="text" class="loc-input" name="location" required id="to-location">
+			<input type="submit" id="to-submit" name="submit" class="book-submit loc-sbmt" value="Ok">
+		</form>
+	</div>
+	<div id="to-map-container" class="map-container"></div>
+</div>
+<!-- modal for map TO ends-->
+
+
+	<div class="form-container">
+		<form action="/" id="form-book-a-cab">
+			<div class="row form-header">
+				<div class="col-sm-12">
+					<input type="radio" name="type" value="personal" class="radio" id="personal">
+					<div class="form-header-item">
+						<label for="personal" class="type-lbl personal"><span>Personal</span></label>
+					</div>
+					<input type="radio" name="type" value="budget" class="radio" id="budget">
+					<div class="form-header-item">
+						<label for="budget" class="type-lbl budget"><span>Budget</span></label>
+					</div>
+					<input type="radio" name="type" value="airport" class="radio" id="airport">
+					<div class="form-header-item">
+						<label for="airport" class="type-lbl airport"><span>Airport</span></label>
+					</div>
+					<input type="radio" name="type" value="truck" class="radio" id="truck">
+					<div class="form-header-item">
+						<label for="truck" class="type-lbl truck"><span>Truck</span></label>
+					</div>
+				</div>
+			</div>
+			<div class="row black-form">
+
+				<div class="col-sm-12">
+					<div class="row form-lines">
+						<div class="col-sm-6">
+							<label class="form-lines-label" for="name">Name :</label>
+							<input type="text" class="book-input" name="name" id="name" required minlength="2">
+						</div>
+						<div class="col-sm-6">
+							<label class="form-lines-label" for="phone">Phone :</label>
+							<input type="text" class="book-input" name="phone" id="phone" required minlength="4">
+						</div>
+					</div>
+					<div class="row form-lines">
+						<div class="col-sm-12">
+							<label class="form-lines-label date-time-lbl" for="datetime">Date and Time :</label>
+							<input type="text" class="book-input" name="datetime" id="datetime" required>
+						</div>
+					</div>
+					<div class="row form-lines">
+						<div class="col-sm-6 form-addres">
+							<label class="form-lines-label">Address From :</label>
+							<a href="#" class="map-btn" id="map-btn-from">Chose on map</a>
+							<input type="text" name="from_address" id="address-from" class="form-addres-container">
+						</div>
+						<div class="col-sm-6 form-addres">
+							<label class="form-lines-label">Address To :</label>
+							<a href="#" class="map-btn" id="map-btn-to">Chose on map</a>
+							<input type="text" name="to_address" id="address-to" class="form-addres-container">
+						</div>
+					</div>
+					<div class="row form-lines">
+						<div class="col-sm-6">
+							<div class="form-pass-amount">
+								<label class="form-lines-label" for="adults">Adults</label>
+								<input class="form-num-input" type="number" name="adults" id="adults">
+							</div>
+							<div class="form-pass-amount">
+								<label class="form-lines-label" for="kids">Kids</label>
+								<input class="form-num-input" type="number" name="kids" id="kids">
+							</div>
+						</div>
+						<div class="col-sm-6">
+							
+							<p id="booking-errors"></p>
+
+							<input type="submit" name="submit" class="book-submit" value="Done" id="booking-done-btn">
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+
+</div>
+<div class="skew-bg"></div>
+
+<!-- booking ends -->

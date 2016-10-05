@@ -1,0 +1,297 @@
+		<section class="row car">
+			<div class="col-sm-6 car-side">
+				<div class="car-title">
+					<h2>There are many variations of passages</h2>
+					<small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At distinctio tempora repudiandae perferendis nesciunt commodi delectus quo, excepturi possimus rem.</small>
+				</div>
+				<img class="car-img" src="img/car.png" alt="car" />
+			</div>
+			<!-- modal for map -->
+			<div class="map-modal" id="map-modal">
+				<div class="loc-line">
+					<p>Drag the pointer to select your location. Or type the location in the field below. Press OK to hide the map.</p>
+					<form action="#">
+						<label for="location">Location:</label>
+						<input type="text" class="loc-input" name="location" required id="location">
+						<input type="submit" id="loc-sbmt" name="submit" class="book-submit loc-sbmt" value="Ok">
+						<input type="button" id="loc-close" class="book-submit loc-sbmt" value="Close">
+					</form>
+				</div>
+				<div id="map-container" class="map-container"></div>
+			</div>
+			<!-- modal for map ends-->
+			<div class="col-sm-6 book-side">
+				<h4 class="book-title">Book a cab</h4>
+				<form action="/" name="book-form" class="book-form" id="book-form">
+					<div class="line">
+						<label for="name">Name:</label>
+						<input type="text" class="book-input" name="name" required>
+					</div>
+					<div class="line">
+						<label for="name">Phone:</label>
+						<input type="text" class="book-input" name="phone" required>
+					</div>
+					<div class="line">
+						<label>Address:</label>
+						<a href="#" class="map-btn" id="map-btn">Chose on map</a>
+					</div>
+					<div class="line">
+						<input type="text" class="address-container" id="address">
+					</div>
+					<div class="line type">
+						<label>Type:</label>
+						
+						<input type="radio" name="type" value="personal" id="personal" class="radio" required>
+						<label for="personal" class="type-lbl personal">
+							<span>Personal</span>
+						</label>
+						
+						<input type="radio" name="type" value="budget" id="budget" class="radio" required>
+						<label for="budget" class="type-lbl budget">
+							<span>Budget</span>
+						</label>
+						
+						<input type="radio" name="type" value="airport" id="airport" class="radio" required>
+						<label for="airport" class="type-lbl airport">
+							<span>Airport</span>
+						</label>
+
+						<input type="radio" name="type" value="truck" id="truck" class="radio" required>
+						<label for="truck" class="type-lbl truck"><span>Truck</span>
+						</label>
+
+					</div>
+					<div class="line">
+						<p id="errors"></p>
+						<input type="submit" name="submit" class="book-submit" value="Done" id="done-btn">
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<section class="services">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="serv-title">Our Services</h2>
+				</div>
+			</div>
+			<div class="row serv-images">
+				<div class="col-sm-3">
+					<a href="#" class="serv-item">
+						<div class="serv-im-cont">
+							<img src="img/services/truck.jpg" alt="truck" class="serv-img">
+						</div>
+						<div class="serv-text">
+							<h3 class="serv-text-title">Truck</h3>
+							<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-3">
+					<a href="#" class="serv-item">
+						<div class="serv-im-cont">
+							<img src="img/services/vip-taxi.jpg" alt="vip taxi" class="serv-img">
+						</div>
+						<div class="serv-text">
+							<h3 class="serv-text-title">Vip Taxi</h3>
+							<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-3">
+					<a href="#" class="serv-item">
+						<div class="serv-im-cont">
+							<img src="img/services/retro.jpg" alt="retro taxi" class="serv-img">
+						</div>
+						<div class="serv-text">
+							<h3 class="serv-text-title">Retro Taxi</h3>
+							<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-3">
+					<a href="#" class="serv-item">
+						<img src="img/services/airport.jpg" alt="airport meeting" class="serv-img">
+						<div class="serv-text">
+							<h3 class="serv-text-title">Airport Meeting</h3>
+							<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="row app">
+			<div class="col-sm-6 app-left">
+				<h3 class="app-title">Taxi<span>Press</span> app</h3>
+				<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even</p>
+				<a href="#" class="app-link google"></a>
+				<a href="#" class="app-link apple"></a>
+			</div>
+			<div class="app-phone-container">
+				<img src="img/app/iphone.png" alt="iphone" class="app-phone">
+			</div>
+			<div class="col-sm-6 app-right">
+				<ul class="app-list">
+					<li class="app-right-item">
+						<h3>Easy to use</h3>
+						<p>There are many variations of passages</p>
+					</li>
+					<li class="app-right-item">
+						<h3>Fast responce</h3>
+						<p>Lorem Ipsum available, but the majority have suffered alteration in some form</p>
+					</li>
+					<li class="app-right-item">
+						<h3>Friendly design</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="row works">
+			<div class="row">
+				<div class="col-sm-12 works-head">
+					<h2 class="works-title">How it works</h2>
+					<p>There are many variations of passages of Lorem Ipsum available</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4 works-items">
+					<div class="works-icon phone"></div>
+					<div class="works-item-text">
+						<h3 class="works-item-title">Lorem ipsum.</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, ad!</p>
+					</div>
+				</div>
+				<div class="col-sm-4 works-items">
+					<div class="works-icon globe"></div>
+					<div class="works-item-text">
+						<h3 class="works-item-title">Lorem ipsum.</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, facere!</p>
+					</div>
+				</div>
+				<div class="col-sm-4 works-items">
+					<div class="works-icon truck"></div>
+					<div class="works-item-text">
+						<h3 class="works-item-title">Lorem ipsum.</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, fugiat.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="row suggest">
+			<div class="row">
+				<div class="col-sm-6 col-sm-push-6 sugg-right">
+					<h3 class="sugg-right-title">Have any <span>suggestions?</span></h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati sint expedita repellendus labore dicta quae qui blanditiis laborum, eveniet, optio vitae, alias aspernatur. Reiciendis magnam, nesciunt tempora minus, ex iure?</p>
+				</div>
+				<div class="col-sm-6 col-sm-pull-6 sugg-left">
+					<form class="sugg-form" action="#">
+						<label for="name" class="sugg-label">Name</label>
+						<input id="name" type="text" class="sugg-input" required>
+						<label for="email" class="sugg-label">Email</label>
+						<input id="email" type="email" class="sugg-input" required>
+						<label for="mess" class="sugg-label">Message</label>
+						<textarea id="mess" name="mess" rows="5" class="sugg-input" required></textarea>
+						<input type="submit" class="book-submit" value="Send">
+					</form>
+				</div>
+			</div>
+		</section>
+		<section class="row cars">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="serv-title">Our cars</h2>
+					<p>There are many variations of passages of Lorem Ipsum available</p>
+				</div>
+			</div>
+			<div class="row cars-container">
+				<div class="col-sm-3">
+					<div class="cars-left">
+						<img src="img/cars/vw-jumpy-multispace-1.png" alt="multispace" class="car-image">
+					</div>
+					<div class="cars-left">
+						<img src="img/cars/vw-jumpy-multispace-2.png" alt="multispace" class="car-image">
+					</div>
+				</div>
+				<div class="col-sm-6 cars-center">
+					<div class="flexslider" id="flex">
+						<ul class="slides">
+							<li>
+								<img src="img/cars/23-370x176.jpg" alt="Taxi Cab" />
+								<p class="flex-caption">TaxiPress Cab Jumpy Multispace 	
+									<small>2015 , $15 / km</small></p>
+								</li>
+								<li>
+									<img src="img/cars/24-370x176.jpg" alt="Taxi Cab" />
+									<p class="flex-caption">TaxiPress Cab Jumpy Multispace 	
+										<small>2015 , $15 / km</small></p>
+									</li>
+									<li>
+										<img src="img/cars/25-370x176.jpg" alt="Taxi Cab" />
+										<p class="flex-caption">TaxiPress Cab Jumpy Multispace 	
+											<small>2015 , $15 / km</small></p>
+										</li>
+									</ul>
+								</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="cars-right">
+						<img src="img/cars/vw-jumpy-multispace-3.png" alt="multispace" class="car-image">
+					</div>
+					<div class="cars-right">
+						<img src="img/cars/vw-jumpy-multispace-4.png" alt="multispace" class="car-image">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="row news-specials">
+			<div class="row">
+				<div class="col-sm-6 news">
+					<div class="news-header">
+						<h2 class="news-title">News</h2>
+						<a href="#" class="more-news">More news</a>
+					</div>
+					<div class="news-items row">
+						<div class="news-left col-xs-3">
+							<p class="news-day">12</p>
+							<p class="news-date">Jun 2016</p>
+						</div>
+						<div class="news-right col-xs-9">
+							<p class="news-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos. ipsum dolor sit amet, consectetur adipisicing.</p>
+						</div>
+					</div>
+					<div class="news-items row">
+						<div class="news-left col-xs-3">
+							<p class="news-day">12</p>
+							<p class="news-date">Jun 2016</p>
+						</div>
+						<div class="news-right col-xs-9">
+							<p class="news-text">Lorem ipsum dolor sit.</p>
+						</div>
+					</div>
+					<div class="news-items row">
+						<div class="news-left col-xs-3">
+							<p class="news-day">12</p>
+							<p class="news-date">Jun 2016</p>
+						</div>
+						<div class="news-right col-xs-9">
+							<p class="news-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate enim sequi molestiae!</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 specials">
+					<div class="spec-header">
+						<h2 class="spec-title">Specials</h2>
+						<a href="" class="more-spec">More specials</a>
+					</div>
+					<div class="spec-car-img">
+						<h4 class="spec-car-img-text">All the Lorem Ipsum generators on the web</h4>
+						<span>Lorem ipsum dolor.</span>
+					</div>
+					<div class="spec-offer">
+						<p class="spec-offer-text">Specials offer</p>
+						<p class="spec-offer-perc">-50%</p>
+					</div>
+				</div>
+			</div>
+		</section>
