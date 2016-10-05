@@ -41,13 +41,6 @@ $(function() {
 
 
 
-	$(document).on('load', '.flexslider', function () {
-		$('.flexslider').flexslider({
-			animation: "slide"
-		});
-	});
-
-
 	// submit on book a cab form on home page
 	$(document).on('click', '#done-btn', function(event) {
 		validateAddress( $('#book-form'), $('#address'), event );
@@ -178,21 +171,35 @@ function loadPages(page) {
 	$('#content').load(currPage, function() {
 
 		if (page == 'home') {
-			$('.flexslider').flexslider({
-				animation: "slide"
-			});
+
+			var script = document.createElement('script');
+			script.src = '/app/libs/flexslider/jquery.flexslider-min.js';
+			script.onload = function () {
+				$('.flexslider').flexslider({
+					animation: "slide"
+				});
+			};
+			document.head.appendChild(script); //or something of the likes
+
+			var script = document.createElement('script');
+			script.src = 'http://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js';
+			script.onload = function () {
+				$('#book-form').validate();
+			};
+			document.head.appendChild(script); //or something of the likes
+
 		}
 		if (page == 'booking') { //load datepicker only on booking page
 			var picker = new Pikaday({ field: $('#datetime')[0] });
-			validateBooking();
+			validateBooking( $('#form-book-a-cab'), $('#booking-errors') );
 		}
 	});//load ends
 
 
-	// use historyApi (display current page in address line)
-	if (page != window.location){
-		window.history.pushState(null, null, page);
-	}
+	// // use historyApi (display current page in address line)
+	// if (page != window.location){
+	// 	window.history.pushState(null, null, page);
+	// }
 }
 
 function loadFooter() {
@@ -203,10 +210,6 @@ function validateAddress(form, addressParagraph, event) {
 	var checked = true;
 	if( addressParagraph.val() == '' ) {
 		$('#errors').text('Choose an address, please');
-		checked = false;
-	}
-	if( form.find('input[name="type"]:checked').length < 1 ) {
-		$('#errors').text('Choose Type, please');
 		checked = false;
 	}
 	if (checked === false) {
@@ -220,12 +223,12 @@ function validateAddress(form, addressParagraph, event) {
 	}
 }
 
-function validateBooking() {
+function validateBooking(booking_form, error_container) {
 		var script = document.createElement('script');
 		script.src = 'http://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js';
 		script.onload = function () {
 
-			$("#form-book-a-cab").validate({
+			booking_form.validate({
 				// Specify validation rules
 				rules: {
 					// The key name on the left side is the name attribute
@@ -250,7 +253,7 @@ function validateBooking() {
 
 				errorPlacement: function(error, element) {
 					if ( element.is(":radio") ) {
-					    error.appendTo( $('#booking-errors') );
+					    error.appendTo( error_container );
 					} 
 					else { // This is the default behavior 
 					    error.insertAfter( element );
