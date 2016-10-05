@@ -729,14 +729,14 @@ footer {
   width: 100%; }
 
 .serv2-img {
-  -webkit-filter: grayscale(100%) contrast(8);
-  filter: grayscale(100%) contrast(8);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
   -webkit-transition: all .4s;
   transition: all .4s; }
 
 .serv2-chess-item:hover .serv2-img {
-  -webkit-filter: grayscale(0%) contrast(1);
-  filter: grayscale(0%) contrast(1); }
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%); }
 
 a.serv2-chess-item-link {
   color: #0C1715; }
@@ -1079,6 +1079,10 @@ a.blog-read-more-link {
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
   /**/ }
+
+.wrap {
+  margin: -20px auto 0;
+  width: 960px; }
 
 /*==========  Desktop First Method  ==========*/
 @media only screen and (max-width: 1280px) {

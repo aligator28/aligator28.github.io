@@ -1,7 +1,7 @@
 $(function() {
 
 	// navigation (using ajax loading)
-	// loadPages('home');
+	loadPages('home');
 	// show footer after page loaded
 	loadFooter();
 

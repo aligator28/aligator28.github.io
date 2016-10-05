@@ -1,0 +1,72 @@
+		    <!-- Content -->
+    <div class="row wrap">
+        <div class="col-sm-6 left">
+            <h2>Taxi <span>Press</span></h2>
+                            <p>Contact page content</p>
+                        
+
+            <div class="line"></div>
+
+             <span>Our address</span>                
+             <p>Poltava</p>                <br/>
+            <span>Phone for clients</span>                
+            <p class="phone">800 436-67-90, 800 436-67-10</p>                <br/>
+            <div class="line"></div>
+
+            <div class="socials">
+                            <a href="http://twitter.com" class="twitter" rel="external"></a>
+                                        <a href="http://facebook.com" class="facebook" rel="external"></a>
+                                        <a href="http://youtube.com" class="youtube" rel="external"></a>
+                        </div>
+        </div>
+        <div class="col-sm-6 right sugg-left">
+            <h3>Contact us</h3>
+            <form class="sugg-form" action="http://scroll/wordpress/contacts/">
+                <label for="name" class="contacts-label">
+                    Name                </label>
+                <input name="contact[name]" type="text" placeholder="Your Name (required)" value="" required="required" id="name" class="sugg-input" />
+
+                <label for="email" class="contacts-label">
+                    Email                </label>
+                <input class="sugg-input" name="contact[email]" type="email" placeholder="Email (required)" value="" required="required" id="email" />
+                <label for="mess" class="contacts-label">
+                    Message                </label>
+                <textarea class="sugg-input" name="contact[message]"  placeholder="Your Message (required)"id="contact-form-message" required="required" id="mess">
+                                    </textarea>
+                <input type="submit" class="book-submit" value="Send"/>
+                <input type="hidden" id="_wpnonce" name="_wpnonce" value="0f6660241c" /><input type="hidden" name="_wp_http_referer" value="/wordpress/contacts/" />            </form>
+
+        </div>
+    </div>
+
+ <!-- Map -->
+    <section class="map">
+    <script type='text/javascript' src='http://maps.google.com/maps/api/js?sensor=false&#038;ver=4.6.1'></script>
+            <div class="ale_map_canvas" id="ale_map_57f51b02b710a" style="height: 400px; width: 100%"></div>
+
+            <script type="text/javascript">
+                var map_ale_map_57f51b02b710a;
+                function ale_run_map_ale_map_57f51b02b710a(){
+                    var location = new google.maps.LatLng("49.588267", "34.551417");
+                    var map_options = {
+                        zoom: 12,
+                        center: location,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                        scrollwheel: false,
+                        // это черно-белая карта (можно убрать)
+                        styles: [{
+                        	stylers: [{
+                        		saturation: -100
+                        	}]
+                        }]
+                    }
+                    map_ale_map_57f51b02b710a = new google.maps.Map(document.getElementById("ale_map_57f51b02b710a"), map_options);
+                    var marker = new google.maps.Marker({
+                        position: location,
+                        map: map_ale_map_57f51b02b710a,
+                        icon: 'http://scroll/wordpress/wp-content/themes/taxipress/css/images/map-icon.png'
+                    });
+                }
+                ale_run_map_ale_map_57f51b02b710a();
+            </script>
+            </section>
