@@ -8,103 +8,143 @@
 			display: flex;
 			justify-content: space-around;
 		}
+		.portfolio-item {
+			height: 50vh; /* нужно задать высоту чтобы не исчезало описание при наведении (слой со всем содержимым достаточно высоким)*/
+		}
 		.portfolio-desc {
 			position: absolute;
-			top: 250px;
+			top: 230px;
+			left: 0;
 			width: 100%;
-			display: flex;
-			flex-direction: row;
-			justify-content: space-around;
 			opacity: 0;
+			display: flex;
+			justify-content: space-around;
 			transition: all .5s;
+			z-index: 0; /* обязательно при скрытии описания приписывать нулевой индекс, чтобы слой уходил вниз */
+		}
+		/*це трикутничок, зроблений за допомогою псевдоелемента*/
+		.portfolio-desc:before {
+			content: "";
+			display: block;
+			width: 0;
+			height: 0;
+			border: 15px solid transparent;
+			border-bottom: 15px solid black;
+			position: absolute;
+			top: -30px;
 		}
 		.p-desc {
-			border: 1px solid black;
-			width: 33%;
+			width: 33%; /* просто чтобы были три равные блоки (если использовать бутстрап, то это не нужно) */
 		}
-		.portfolio-item:hover + .portfolio-desc {
-			opacity: 1;
-			border: 2px;
+		.portfolio-item:hover > .portfolio-desc {
+			opacity: 1; /* проявляем */
+			z-index: 9999; /* при наведении выводим слой на первый план, и текст не будет исчезать */
 		}
 	</style>
+
 </head>
 <body>
 	<!-- делаем большую секцию -->
 	<section class="portfolios">
-		<div class="portfolio-item">
+		<div class="portfolio-item" id="item1">
 			<img src="https://dummyimage.com/200x200/999/fff&text=Photo1" alt="">
+			<div class="portfolio-desc" id="desc1">
+				<div class="p-desc desc-text">
+					<h3>First Title</h3>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem facere sed vitae laudantium molestiae cupiditate magnam dolorum deserunt, officiis ex, blanditiis cumque commodi dicta sint ut vero animi quos quia nam necessitatibus eius ad. Placeat dolor illo alias. Asperiores unde aliquam nostrum ratione repellat omnis, pariatur optio, fuga culpa, placeat quod excepturi, voluptas et.
+					</p>
+				</div>
+				<div class="p-desc desc-skills">
+					<h3>First Skills title</h3>
+					<p>Some skills</p>
+				</div>
+				<div class="p-desc desc-graph">
+					<h3>First Graph title</h3>
+					<div>Some graph</div>
+				</div>
+			</div>
 		</div>
-		<div class="portfolio-desc">
-			<div class="p-desc desc-text">
-				<h3>First Title</h3>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem facere sed vitae laudantium molestiae cupiditate magnam dolorum deserunt, officiis ex, blanditiis cumque commodi dicta sint ut vero animi quos quia nam necessitatibus eius ad. Placeat dolor illo alias. Asperiores unde aliquam nostrum ratione repellat omnis, pariatur optio, fuga culpa, placeat quod excepturi, voluptas et.
-				</p>
-			</div>
-			<div class="p-desc desc-skills">
-				<h3>First Skills title</h3>
-				<p>Some skills</p>
-			</div>
-			<div class="p-desc desc-graph">
-				<h3>First Graph title</h3>
-				<div>Some graph</div>
-			</div>
-		</div>
-		<div class="portfolio-item">
+
+
+		<div class="portfolio-item" id="item2">
 			<img src="https://dummyimage.com/200x200/999/fff&text=Photo2" alt="">
+			<div class="portfolio-desc" id="desc2">
+				<div class="p-desc desc-text">
+					<h3>Second Title</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem facere sed vitae laudantium molestiae cupiditate magnam dolorum deserunt, officiis ex, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem facere sed vitae laudantium molestiae cupiditate magnam dolorum deserunt, officiis ex, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem facere sed vitae laudantium molestiae cupiditate magnam dolorum deserunt, officiis ex, blanditiis cumque commodi dicta sint ut vero animi quos quia nam necessitatibus eius ad. Placeat dolor illo alias. Asperiores unde aliquam nostrum ratione repellat omnis, pariatur optio, fuga culpa, placeat quod excepturi, voluptas et.
+					</p>
+				</div>
+				<div class="p-desc desc-skills">
+					<h3>Second Skills title</h3>
+					<p>Second Some skills</p>
+				</div>
+				<div class="p-desc desc-graph">
+					<h3>Second Graph title</h3>
+					<div>Some graph</div>
+				</div>
+			</div>
 		</div>
-		<div class="portfolio-desc">
-			<div class="p-desc desc-text">
-				<h3>Second Title</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem facere sed vitae laudantium molestiae cupiditate magnam dolorum deserunt, officiis ex, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem facere sed vitae laudantium molestiae cupiditate magnam dolorum deserunt, officiis ex, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem facere sed vitae laudantium molestiae cupiditate magnam dolorum deserunt, officiis ex, blanditiis cumque commodi dicta sint ut vero animi quos quia nam necessitatibus eius ad. Placeat dolor illo alias. Asperiores unde aliquam nostrum ratione repellat omnis, pariatur optio, fuga culpa, placeat quod excepturi, voluptas et.
-				</p>
-			</div>
-			<div class="p-desc desc-skills">
-				<h3>Second Skills title</h3>
-				<p>Second Some skills</p>
-			</div>
-			<div class="p-desc desc-graph">
-				<h3>Second Graph title</h3>
-				<div>Some graph</div>
-			</div>
-		</div>
-		<div class="portfolio-item">
+		<div class="portfolio-item" id="item3">
 			<img src="https://dummyimage.com/200x200/999/fff&text=Photo3" alt="">
+			<div class="portfolio-desc" id="desc3">
+				<div class="p-desc desc-text">
+					<h3>Third Title</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem facere sed vitae laudantium molestiae cupiditate magnam dolorum deserunt, officiis ex, blanditiis cumque commodi dicta sint ut vero ratione repellat omnis, pariatur optio, fuga culpa, placeat quod excepturi, voluptas et.
+					</p>
+				</div>
+				<div class="p-desc desc-skills">
+					<h3>Third Skills title</h3>
+					<p>Some skills</p>
+				</div>
+				<div class="p-desc desc-graph">
+					<h3>Third Graph title</h3>
+					<div>Some graph</div>
+				</div>
+			</div>
 		</div>
-		<div class="portfolio-desc">
-			<div class="p-desc desc-text">
-				<h3>Third Title</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem facere sed vitae laudantium molestiae cupiditate magnam dolorum deserunt, officiis ex, blanditiis cumque commodi dicta sint ut vero ratione repellat omnis, pariatur optio, fuga culpa, placeat quod excepturi, voluptas et.
-				</p>
-			</div>
-			<div class="p-desc desc-skills">
-				<h3>Third Skills title</h3>
-				<p>Some skills</p>
-			</div>
-			<div class="p-desc desc-graph">
-				<h3>Third Graph title</h3>
-				<div>Some graph</div>
-			</div>
-		</div>
-		<div class="portfolio-item">
+		<div class="portfolio-item" id="item4">
 			<img src="https://dummyimage.com/200x200/999/fff&text=Photo4" alt="">
-		</div>
-		<div class="portfolio-desc">
-			<div class="p-desc desc-text">
-				<h3>Fourth Title</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem facere sed vitae laudantium molestiae cupiditate magnam dolorum deserunt, officiis ex, blanditiis cumque commodi dicta sint ut vero 
-				</p>
-			</div>
-			<div class="p-desc desc-skills">
-				<h3>Fourth Skills title</h3>
-				<p>Some skills</p>
-			</div>
-			<div class="p-desc desc-graph">
-				<h3>Fourth Graph title</h3>
-				<div>Some graph</div>
+			<div class="portfolio-desc" id="desc4">
+				<div class="p-desc desc-text">
+					<h3>Fourth Title</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem facere sed vitae laudantium molestiae cupiditate magnam dolorum deserunt, officiis ex, blanditiis cumque commodi dicta sint ut vero 
+					</p>
+				</div>
+				<div class="p-desc desc-skills">
+					<h3>Fourth Skills title</h3>
+					<p>Some skills</p>
+				</div>
+				<div class="p-desc desc-graph">
+					<h3>Fourth Graph title</h3>
+					<div>Some graph</div>
+				</div>
 			</div>
 		</div>
 	</section>
 
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+	<!-- в нижеприведенном скрипте перемещаем треугольник к каждому фото -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var item = $('.portfolio-item');
+
+			// ловим событие ховер
+			item.hover(function(){
+				// вот правильный способ снять позицию элемента на странице
+				var left = $(this).offset().left;
+				var id = $(this).attr('id');
+
+				// а это уже ванилла джаваскипр (без jquery)
+				// так как в jquery доступа к псевдоэлементам нет (треугольничек у нас сделан с помощью псевдоэлемента :before), то мы используем вот такой хак, добавляем в наш список стилей новое правило addRule() - и в нем можно добавить любое правило к любому элементу
+
+				var psevdoTriangle = '#' + id + ' div.portfolio-desc:before';
+
+				document.styleSheets[0].addRule(psevdoTriangle, 'left: ' + (left + 70) + 'px;');
+			});
+		});
+	</script>
 </body>
 </html>
