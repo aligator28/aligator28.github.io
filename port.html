@@ -3,14 +3,107 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Portfolio</title>
+	<style type="text/css">
+		.portfolios {
+			display: flex;
+			justify-content: space-around;
+		}
+		.portfolio-desc {
+			position: absolute;
+			top: 250px;
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			opacity: 0;
+			transition: all .5s;
+		}
+		.p-desc {
+			border: 1px solid black;
+			width: 33%;
+		}
+		.portfolio-item:hover + .portfolio-desc {
+			opacity: 1;
+		}
+	</style>
 </head>
 <body>
 	<!-- делаем большую секцию -->
 	<section class="portfolios">
-		<div class="portfolio-item"><img src="https://dummyimage.com/200x200/999/fff&text=Photo" alt=""></div>
-		<div class="portfolio-item"><img src="https://dummyimage.com/200x200/999/fff&text=Photo" alt=""></div>
-		<div class="portfolio-item"><img src="https://dummyimage.com/200x200/999/fff&text=Photo" alt=""></div>
-		<div class="portfolio-item"><img src="https://dummyimage.com/200x200/999/fff&text=Photo" alt=""></div>
+		<div class="portfolio-item">
+			<img src="https://dummyimage.com/200x200/999/fff&text=Photo1" alt="">
+		</div>
+		<div class="portfolio-desc">
+			<div class="p-desc desc-text">
+				<h3>First Title</h3>
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem facere sed vitae laudantium molestiae cupiditate magnam dolorum deserunt, officiis ex, blanditiis cumque commodi dicta sint ut vero animi quos quia nam necessitatibus eius ad. Placeat dolor illo alias. Asperiores unde aliquam nostrum ratione repellat omnis, pariatur optio, fuga culpa, placeat quod excepturi, voluptas et.
+				</p>
+			</div>
+			<div class="p-desc desc-skills">
+				<h3>First Skills title</h3>
+				<p>Some skills</p>
+			</div>
+			<div class="p-desc desc-graph">
+				<h3>First Graph title</h3>
+				<div>Some graph</div>
+			</div>
+		</div>
+		<div class="portfolio-item">
+			<img src="https://dummyimage.com/200x200/999/fff&text=Photo2" alt="">
+		</div>
+		<div class="portfolio-desc">
+			<div class="p-desc desc-text">
+				<h3>Second Title</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem facere sed vitae laudantium molestiae cupiditate magnam dolorum deserunt, officiis ex, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem facere sed vitae laudantium molestiae cupiditate magnam dolorum deserunt, officiis ex, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem facere sed vitae laudantium molestiae cupiditate magnam dolorum deserunt, officiis ex, blanditiis cumque commodi dicta sint ut vero animi quos quia nam necessitatibus eius ad. Placeat dolor illo alias. Asperiores unde aliquam nostrum ratione repellat omnis, pariatur optio, fuga culpa, placeat quod excepturi, voluptas et.
+				</p>
+			</div>
+			<div class="p-desc desc-skills">
+				<h3>Second Skills title</h3>
+				<p>Second Some skills</p>
+			</div>
+			<div class="p-desc desc-graph">
+				<h3>Second Graph title</h3>
+				<div>Some graph</div>
+			</div>
+		</div>
+		<div class="portfolio-item">
+			<img src="https://dummyimage.com/200x200/999/fff&text=Photo3" alt="">
+		</div>
+		<div class="portfolio-desc">
+			<div class="p-desc desc-text">
+				<h3>Third Title</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem facere sed vitae laudantium molestiae cupiditate magnam dolorum deserunt, officiis ex, blanditiis cumque commodi dicta sint ut vero ratione repellat omnis, pariatur optio, fuga culpa, placeat quod excepturi, voluptas et.
+				</p>
+			</div>
+			<div class="p-desc desc-skills">
+				<h3>Third Skills title</h3>
+				<p>Some skills</p>
+			</div>
+			<div class="p-desc desc-graph">
+				<h3>Third Graph title</h3>
+				<div>Some graph</div>
+			</div>
+		</div>
+		<div class="portfolio-item">
+			<img src="https://dummyimage.com/200x200/999/fff&text=Photo4" alt="">
+		</div>
+		<div class="portfolio-desc">
+			<div class="p-desc desc-text">
+				<h3>Fourth Title</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem facere sed vitae laudantium molestiae cupiditate magnam dolorum deserunt, officiis ex, blanditiis cumque commodi dicta sint ut vero 
+				</p>
+			</div>
+			<div class="p-desc desc-skills">
+				<h3>Fourth Skills title</h3>
+				<p>Some skills</p>
+			</div>
+			<div class="p-desc desc-graph">
+				<h3>Fourth Graph title</h3>
+				<div>Some graph</div>
+			</div>
+		</div>
 	</section>
+
 </body>
 </html>
