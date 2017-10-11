@@ -1,3 +1,50 @@
+.about-row {
+  display: flex;
+  margin: 120px 0 120px 5%;
+  height: 100vh;
+}
+
+.about-row .about-u {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  overflow: hidden;
+}
+
+.about-row .about-u .au-discr {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  background-color: #fd5433;
+  padding: 75px 120px 30px 120px;
+  opacity: 0;
+  z-index: 0;
+  transition: all .8s;
+  margin: 0;
+}
+
+.about-u:hover {
+  overflow: visible;
+}
+
+.about-row .about-u .au-discr:nth-child(4) .skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-row .about-u .au-discr:nth-child(4) .skills .skil-lines {
+  height: 10px;
+  background-color: #fff;
+  margin: 17px 0;
+}
+
+.about-u:hover > .au-discr {
+  opacity: 1;
+  z-index: 9999;
+}
+
 @font-face {
   font-family: Oswald-Bold;
   src: url(../fonts/Oswald/Oswald-Bold.ttf);
@@ -8,6 +55,7 @@
   src: url(../fonts/Oswald/Oswald-Regular.ttf);
 }
 
+@charset "UTF-8";
 html {
   margin: 0;
   padding: 0;
@@ -15,15 +63,6 @@ html {
 
 header {
   height: 110px;
-}
-
-.container {
-  margin: 0;
-  padding: 0;
-}
-
-nav {
-  justify-content: flex-end;
 }
 
 .nav-mnu {
@@ -40,10 +79,9 @@ nav {
   padding: 65px 20px;
   font-family: Oswald-Bold;
   color: #565656;
-  display: inline-block;
 }
 
-.nav-mnu li:hover {
+.nav-mnu li a:hover {
   background-color: #fd5433;
   color: #ffffff;
 }
@@ -52,12 +90,13 @@ nav {
   height: 110px;
   display: flex;
   align-items: center;
-  margin-left: 20%;
+  margin-left: 50%;
 }
 
 nav {
   display: flex;
   height: 110px;
+  justify-content: flex-end;
 }
 
 .bcg_head {
@@ -71,12 +110,7 @@ nav {
 }
 
 .bcg_head .in-head {
-/*  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;*/
-
-/*це ще один спосиб вертикального та горизонтального виривнювання*/
+  /*це ще один спосиб вертикального та горизонтального виривнювання*/
   position: absolute;
   top: 50%;
   left: 50%;
@@ -92,8 +126,7 @@ nav {
   color: #ffffff;
   text-transform: uppercase;
   font-size: 7vw;
-
-/*добавив нижче*/
+  /*добавив нижче*/
   text-align: center;
   width: 100%;
 }
@@ -106,8 +139,7 @@ nav {
   margin-top: 9%;
   width: 10em;
   font-size: 2em;
-
-/*добавив нижче*/
+  /*добавив нижче*/
   top: 8%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -132,10 +164,11 @@ nav {
   flex-direction: column;
   width: 3em;
   position: absolute;
-  right: -30px;
+  right: -20px;
   top: 40px;
   height: 30px;
-  margin-right: 83px;
+  margin-right: 75px;
+  z-index: 9999;
 }
 
 .switch .sandwich {
@@ -191,6 +224,17 @@ nav {
   transform: rotate(-45deg);
 }
 
+.chapters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  border-bottom: solid #565656 1px;
+  width: 100%;
+  text-transform: uppercase;
+  color: #fd5433;
+}
+
 @media screen and (min-width: 1200px) {
   .switch {
     opacity: 0;
@@ -215,7 +259,6 @@ nav {
     padding: 10px;
     border-bottom: solid #565656 1px;
     font-size: 1.8rem;
-    width: 50%;
   }
   .nav-mnu > li:hover {
     border-bottom: solid #fff 1px;
@@ -224,27 +267,19 @@ nav {
   .logo {
     margin-left: 20%;
   }
-  .serv-row .serv_desript h2 {
-    padding: 50px 0;
-  }
-  .row .porfolio_img > img {
-    height: 20vh;
-  }
 }
 
-@media screen and (max-width: 992px) {
-  .serv-row .serv_desript h2 {
-    padding: 50px 0;
-  }
-  .serv-row .serv_desript h3 {
-    padding: 0 20px;
-  }
-  .row .porfolio_img > img {
-    height: 25vh;
+@media screen and (max-width: 1024px) {
+  .nav-mnu li a {
+    padding: 0;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .porfolio_img img {
+    width: 50%;
+    height: 50%;
+  }
   .bcg_head {
     height: 80vh;
     overflow: hidden;
@@ -252,36 +287,16 @@ nav {
   .bcg_head img {
     width: 200vw;
   }
-  .serv-row .serv_desript h2 {
-    padding: 20px 0;
-  }
-  .serv-row .serv_desript h3 {
-    padding: 0;
-  }
-  .row .porfolio_img > img {
-    height: 30vh;
-  }
 }
 
-@media screen and (max-width: 576px) {
-  .bcg_head .in-head > a {
-    margin-top: 20%;
-  }
-  .bcg_head .in-head > h1 {
-    font-size: 9vw;
-  }
-  .row .porfolio_img > img {
-    height: 47vh;
-  }
+.porfolio_img {
+  padding: 0;
+  text-align: center;
 }
 
-.port {
-  border-top: solid #565656 1px;
-  border-bottom: solid transparent 1px;
-}
-
-.serv-row {
-  margin: 0 120px;
+.porfolio_img img {
+  width: 100%;
+  height: 100%;
 }
 
 .chapters {
@@ -295,14 +310,21 @@ nav {
   color: #fd5433;
 }
 
-.chapters h2 {
+.serv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  border-bottom: solid #565656 1px;
+  width: 100%;
+}
+
+.serv h2 {
+  text-transform: uppercase;
+  color: #fd5433;
 }
 
 .serv_desript {
-  /*display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;*/
   text-align: center;
   margin: 70px 0;
 }
@@ -312,7 +334,6 @@ nav {
   font-family: Oswald-Bold;
   text-transform: uppercase;
   color: #565656;
-  font-size: 1.9rem;
 }
 
 .serv_desript:hover > h2 {
@@ -326,80 +347,56 @@ nav {
   color: #565656;
 }
 
-.port {
-  border-top: solid #565656 1px;
-  border-bottom: none;
+@media screen and (min-width: 1200px) {
+  .switch {
+    opacity: 0;
+  }
 }
 
-.porfolio_img {
-  padding: 0;
-  background-repeat: no-repreat;
-  display: flex;
+@media screen and (max-width: 1200px) {
+  .nav-mnu {
+    transition: .6s;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1001;
+    top: 110px;
+    background-color: #fd5433;
+    margin: 0;
+    padding: 0;
+    right: -100%;
+    opacity: 0;
+  }
+  .nav-mnu > li {
+    padding: 10px;
+    border-bottom: solid #565656 1px;
+    font-size: 1.8rem;
+  }
+  .nav-mnu > li:hover {
+    border-bottom: solid #fff 1px;
+    padding: 10px;
+  }
+  .logo {
+    margin-left: 20%;
+  }
 }
 
-.porfolio_img > img {
-  width: 100%;
-  height: 25vh;
-  transition: all .5s;
+@media screen and (max-width: 1024px) {
+  .nav-mnu li a {
+    padding: 0;
+  }
 }
 
-.porfolio_img:hover > img {
-  opacity: .5;
-}
-
-.about-row {
-  display: flex;
-  margin: 120px 0 120px 5%;
-  /*добавил высоту жестко,чтобы описания сразу помещались, т.к. они изначально скрыты*/
-  height: 100vh;
-}
-
-.about-row .about-u {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50%;
-  /*добавил оверфлоу для родительского контейнера - ведь он у нас переполняется оранжевыми блоками, которые вылазят и развдигают*/
-  overflow: hidden;
-
-  /* зачем background-repeat? у тебе немае бекграунда картинки*/
-  /*background-repeat: no-repeat;*/
-}
-
-.about-row .about-u .au-discr {
-  display: flex;
-  position: absolute;
-  top: 100%;
-  background-color: #fd5433;
-  padding: 75px 120px 30px 120px;
-  opacity: 0;
-  z-index: 0;
-  transition: all .8s;
-  /*сбросил маргины, а то оранжевые блоки вылазят за пределы страницы*/
-  margin: 0;
-}
-.about-u:hover {
-  overflow: visible;
-}
-
-/* все движения в джаваскрипте
-.about-row .about-u .au-discr:nth-child(1) {*/
-  /*left: 27%;*/
-/*}*/
-
-.about-row .about-u .au-discr:nth-child(4) .skills {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.about-row .about-u .au-discr:nth-child(4) .skills .skil-lines {
-  height: 10px;
-  background-color: #fff;
-  margin: 17px 0;
-}
-
-.about-u:hover > .au-discr {
-  opacity: 1;
-  z-index: 9999;
+@media screen and (max-width: 768px) {
+  .porfolio_img img {
+    width: 80%;
+    height: 80%;
+  }
+  .bcg_head {
+    height: 80vh;
+    overflow: hidden;
+  }
+  .bcg_head img {
+    width: 200vw;
+  }
 }

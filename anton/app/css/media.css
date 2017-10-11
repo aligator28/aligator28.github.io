@@ -32,7 +32,17 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .nav-mnu li a {
+    padding: 0;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .porfolio_img img {
+    width: 50%;
+    height: 50%;
+  }
   .bcg_head {
     height: 80vh;
     overflow: hidden;

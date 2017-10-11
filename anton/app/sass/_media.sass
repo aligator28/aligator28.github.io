@@ -1,0 +1,44 @@
+$orange: #fd5433
+$dark_head_grey: #565656
+
+@media screen and (min-width: 1200px)
+	.switch
+		opacity: 0
+@media screen and (max-width: 1200px) 
+	.nav-mnu
+		transition: .6s
+		display: flex
+		flex-direction: column
+		position: absolute
+		z-index: 1001
+		top: 110px
+		background-color: $orange
+		margin: 0
+		padding: 0
+		right: -100%
+		opacity: 0
+	.nav-mnu > li
+		padding: 10px
+		border-bottom: solid $dark_head_grey 1px
+		font-size: 1.8rem
+	.nav-mnu > li:hover
+		border-bottom: solid #fff 1px
+		padding: 10px
+	.logo
+		margin-left: 20%
+
+@media screen and (max-width: 1024px)
+	.nav-mnu li a
+		padding: 0;
+	
+
+@media screen and (max-width: 768px)
+	.porfolio_img
+		img
+			width: 80%
+			height: 80%
+	.bcg_head
+		height: 80vh
+		overflow: hidden
+		img
+			width: 200vw
