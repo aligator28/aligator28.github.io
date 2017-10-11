@@ -1,0 +1,158 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 110px;
+}
+
+.nav-mnu {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  transparency: 0.4;
+}
+
+.nav-mnu li {
+  text-transform: uppercase;
+  padding: 65px 20px;
+  font-family: Oswald-Bold;
+  color: #565656;
+}
+
+.nav-mnu li:hover {
+  background-color: #fd5433;
+  color: #ffffff;
+}
+
+.logo {
+  height: 110px;
+  display: flex;
+  align-items: center;
+  margin-left: 50%;
+}
+
+nav {
+  display: flex;
+  height: 110px;
+}
+
+.bcg_head {
+  padding: 0;
+}
+
+.bcg_head > img {
+  width: 100%;
+  height: 100%;
+  z-index: 990;
+}
+
+.bcg_head .in-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.bcg_head .in-head > h1 {
+  font-family: Oswald-Bold;
+  position: absolute;
+  z-index: 999;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 7vw;
+}
+
+.bcg_head .in-head > a {
+  position: absolute;
+  z-index: 998;
+  text-transform: uppercase;
+  font-family: Oswald-Bold;
+  margin-top: 9%;
+  width: 10em;
+  font-size: 2em;
+}
+
+.btn-primary {
+  color: #ffffff;
+  border-color: transparent;
+  border-top: solid 2px #FD6E52;
+  background-color: #fd5433;
+}
+
+.btn-primary:hover {
+  background-color: #ffffff;
+  color: #565656;
+  border-color: transparent;
+}
+
+.switch {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  width: 3em;
+  position: absolute;
+  right: -20px;
+  top: 40px;
+  height: 30px;
+  margin-right: 75px;
+}
+
+.switch .sandwich {
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  margin: 3px;
+  position: absolute;
+  transition: .4s;
+}
+
+.switch .line-1 {
+  top: 0;
+}
+
+.switch .line-2 {
+  top: 10px;
+}
+
+.switch .line-3 {
+  top: 20px;
+}
+
+.sw_closed {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  width: 3em;
+  position: absolute;
+  top: 40px;
+}
+
+.sw_closed .sandwich {
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  margin: 3px;
+  position: absolute;
+  transition: .4s;
+}
+
+.sw_closed .line-1 {
+  top: 10px;
+  transform: rotate(45deg);
+}
+
+.sw_closed .line-2 {
+  opacity: 0;
+}
+
+.sw_closed .line-3 {
+  top: 10px;
+  transform: rotate(-45deg);
+}

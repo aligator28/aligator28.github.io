@@ -1,0 +1,123 @@
+$dark_head_grey: #565656
+$white: #ffffff
+$orange: #fd5433
+$bord_orange: #FD6E52
+html
+	margin: 0
+	padding: 0
+header
+	height: 110px
+.nav-mnu
+	display: flex
+	list-style-type: none
+	align-items: center
+	justify-content: center
+	margin: 0
+	transparency: 0.4
+	li
+		text-transform: uppercase
+		padding: 65px 20px
+		font-family: Oswald-Bold
+		color: $dark_head_grey
+		&:hover
+			background-color: $orange
+			color: $white
+.logo
+	height: 110px
+	display: flex
+	align-items: center
+	margin-left: 50%
+nav
+	display: flex
+	height: 110px
+.bcg_head
+	padding: 0
+	& > img
+		width: 100%
+		height: 100%
+		z-index: 990
+	.in-head
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column 
+		position: absolute
+		width: 100%
+		height: 100%
+		& > h1
+			font-family: Oswald-Bold
+			position: absolute
+			z-index: 999
+			color: $white
+			text-transform: uppercase
+			font-size: 7vw
+		& > a
+			position: absolute
+			z-index: 998
+			text-transform: uppercase
+			font-family: Oswald-Bold
+			margin-top: 9%
+			width: 10em
+			font-size: 2em
+.btn-primary
+	color: $white
+	border-color: transparent
+	border-top: solid 2px $bord_orange
+	background-color: $orange
+	&:hover
+		background-color: $white
+		color: $dark_head_grey
+		border-color: transparent
+.switch
+	opacity: 1
+	display: flex
+	flex-direction: column
+	width: 3em
+	position: absolute
+	right: -20px
+	top: 40px
+	height: 30px
+	margin-right: 75px
+	.sandwich
+		width: 100%
+		height: 3px
+		background-color: #000
+		margin: 3px	
+		position: absolute
+		transition: .4s
+	.line-1
+		top: 0
+	.line-2
+		top: 10px
+	.line-3
+		top: 20px
+.sw_closed 
+	opacity: 1
+	display: flex
+	flex-direction: column
+	width: 3em
+	position: absolute
+	// right: -20px
+	top: 40px
+	.sandwich
+		width: 100%
+		height: 3px
+		background-color: #000
+		margin: 3px	
+		position: absolute
+		transition: .4s
+	.line-1
+		top: 10px
+		transform: rotate(45deg)
+	.line-2
+		opacity: 0
+	.line-3
+		top: 10px
+		transform: rotate(-45deg)
+// .offs
+// 	top: 0
+// 	right: 1px
+// .add-marg
+// 	margin-right: 10%
+
+

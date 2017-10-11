@@ -1,0 +1,39 @@
+.serv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  border-bottom: solid #565656 1px;
+  width: 100%;
+}
+
+.serv h2 {
+  text-transform: uppercase;
+  color: #fd5433;
+}
+
+.serv_desript {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 70px 0;
+}
+
+.serv_desript h2 {
+  padding: 20px 0px;
+  font-family: Oswald-Bold;
+  text-transform: uppercase;
+  color: #565656;
+}
+
+.serv_desript:hover > h2 {
+  color: #fd5433;
+}
+
+.serv_desript h3 {
+  font-size: 1rem;
+  text-align: center;
+  font-family: Arial;
+  color: #565656;
+}
