@@ -294,6 +294,7 @@
 			var currentEvent = detectEvent();
 
 			mainBlock.on(currentEvent, function(event) {
+				alert(currentEvent);
 				var discrBlock = $(this).find('.au-discr');
 				var offset = $(this).offset();
 
