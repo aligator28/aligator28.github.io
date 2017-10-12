@@ -1,7 +1,7 @@
 .about-row {
   display: flex;
-  margin: 120px 0 120px 5%;
-  height: 100vh;
+  margin: 0 0 30%;
+  height: 50vh;
 }
 
 .about-row .about-u {
@@ -10,6 +10,12 @@
   align-items: center;
   height: 50%;
   overflow: hidden;
+}
+
+.about-row .about-u img {
+  width: 50%;
+  height: auto;
+  transition: all .5s;
 }
 
 .about-row .about-u .au-discr {
@@ -28,6 +34,11 @@
   overflow: visible;
 }
 
+.about-u:hover img {
+  width: 70%;
+  height: auto;
+}
+
 .about-row .about-u .au-discr:nth-child(4) .skills {
   display: flex;
   flex-direction: column;
@@ -43,6 +54,18 @@
 .about-u:hover > .au-discr {
   opacity: 1;
   z-index: 9999;
+}
+
+.skills-title p {
+  font-size: 1.5em;
+}
+
+.skil-lines p {
+  font-size: 1.5em;
+}
+
+.mobile-switch {
+  display: none;
 }
 
 @font-face {
@@ -99,6 +122,10 @@ nav {
   justify-content: flex-end;
 }
 
+#bcg_header {
+  overflow: hidden;
+}
+
 .bcg_head {
   padding: 0;
 }
@@ -127,6 +154,10 @@ nav {
   text-transform: uppercase;
   font-size: 7vw;
   /*добавив нижче*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   width: 100%;
 }
@@ -140,7 +171,7 @@ nav {
   width: 10em;
   font-size: 2em;
   /*добавив нижче*/
-  top: 8%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -225,9 +256,6 @@ nav {
 }
 
 .chapters {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100px;
   border-bottom: solid #565656 1px;
   width: 100%;
@@ -296,7 +324,6 @@ nav {
 
 .porfolio_img img {
   width: 100%;
-  height: 100%;
 }
 
 .chapters {
@@ -385,9 +412,25 @@ nav {
   .nav-mnu li a {
     padding: 0;
   }
+  .about-row .about-u .au-discr {
+    padding: 20%;
+  }
+  .about-u img {
+    height: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .about-row {
+    height: 35vh;
+  }
+  .about-u img {
+    width: 100%;
+    height: auto;
+  }
+  .bcg_head .in-head > h1 {
+    top: 30%;
+  }
   .porfolio_img img {
     width: 80%;
     height: 80%;
@@ -398,5 +441,47 @@ nav {
   }
   .bcg_head img {
     width: 200vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mobile-switch {
+    position: absolute;
+    left: 80%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 9999;
+    background-image: url("../img/close_btn.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+  }
+  .skills {
+    width: 50%;
+  }
+  .about-row .about-u {
+    margin-bottom: 10%;
+  }
+  .about-row .about-u h2 {
+    font-size: 1.2em;
+  }
+  .about-row .about-u p {
+    font-size: 1em;
+  }
+  .about-row .about-u .au-discr {
+    padding: 5%;
+  }
+  .about-row .about-u img {
+    width: auto;
+    height: 100%;
+    transition: width .8s;
+  }
+  .about-row .about-u:hover img {
+    width: 60%;
+    height: auto;
+  }
+  .bcg_head .in-head > h1 {
+    top: 0;
   }
 }

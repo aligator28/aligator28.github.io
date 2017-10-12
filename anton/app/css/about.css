@@ -1,7 +1,7 @@
 .about-row {
   display: flex;
-  margin: 120px 0 120px 5%;
-  height: 100vh;
+  margin: 0 0 30%;
+  height: 50vh;
 }
 
 .about-row .about-u {
@@ -10,6 +10,12 @@
   align-items: center;
   height: 50%;
   overflow: hidden;
+}
+
+.about-row .about-u img {
+  width: 50%;
+  height: auto;
+  transition: all .5s;
 }
 
 .about-row .about-u .au-discr {
@@ -28,6 +34,11 @@
   overflow: visible;
 }
 
+.about-u:hover img {
+  width: 70%;
+  height: auto;
+}
+
 .about-row .about-u .au-discr:nth-child(4) .skills {
   display: flex;
   flex-direction: column;
@@ -43,4 +54,16 @@
 .about-u:hover > .au-discr {
   opacity: 1;
   z-index: 9999;
+}
+
+.skills-title p {
+  font-size: 1.5em;
+}
+
+.skil-lines p {
+  font-size: 1.5em;
+}
+
+.mobile-switch {
+  display: none;
 }

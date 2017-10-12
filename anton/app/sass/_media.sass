@@ -30,9 +30,23 @@ $dark_head_grey: #565656
 @media screen and (max-width: 1024px)
 	.nav-mnu li a
 		padding: 0;
+	.about-row 
+		.about-u 
+			.au-discr
+				padding: 20%
+	.about-u img
+		height: 100%
 	
 
 @media screen and (max-width: 768px)
+	.about-row
+		height: 35vh
+	.about-u img
+		width: 100%
+		height: auto
+
+	.bcg_head .in-head > h1
+		top: 30%
 	.porfolio_img
 		img
 			width: 80%
@@ -42,3 +56,40 @@ $dark_head_grey: #565656
 		overflow: hidden
 		img
 			width: 200vw
+
+@media screen and (max-width: 480px)
+
+	.mobile-switch
+		position: absolute
+		left: 80%
+		width: 50px
+		height: 50px
+		cursor: pointer
+		z-index: 9999
+		background:
+			image: url('../img/close_btn.png')
+			repeat: no-repeat
+			position: center center
+			size: 100%
+
+	.skills
+		width: 50%
+	.about-row 
+		.about-u
+			margin-bottom: 10%
+			h2
+				font-size: 1.2em
+			p
+				font-size: 1em
+			.au-discr
+				padding: 5%
+			img
+				width: auto
+				height: 100%
+				transition: width .8s
+			&:hover
+				img
+					width: 60%
+					height: auto
+	.bcg_head .in-head > h1
+		top: 0

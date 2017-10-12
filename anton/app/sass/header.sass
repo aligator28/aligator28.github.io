@@ -32,6 +32,8 @@ nav
 	display: flex
 	height: 110px
 	justify-content: flex-end
+#bcg_header
+	overflow: hidden /*для IE - убираем гориз.скролл в хедере Come, stay for a coffee*/
 .bcg_head
 	padding: 0
 	& > img
@@ -39,6 +41,10 @@ nav
 		height: 100%
 		z-index: 990
 	.in-head
+		// display: flex;
+		// align-items: center;
+		// justify-content: center;
+		// flex-direction: column;
 		/*це ще один спосиб вертикального та горизонтального виривнювання*/
 		position: absolute
 		top: 50%
@@ -54,6 +60,10 @@ nav
 			text-transform: uppercase
 			font-size: 7vw
 			/*добавив нижче*/
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
 			text-align: center;
 			width: 100%;
 		& > a
@@ -65,7 +75,7 @@ nav
 			width: 10em
 			font-size: 2em
 			/*добавив нижче*/
-			top: 8%
+			top: 20%
 			left: 50%
 			transform: translate(-50%, -50%)
 .btn-primary
@@ -125,9 +135,9 @@ nav
 		top: 10px
 		transform: rotate(-45deg)
 .chapters 
-	display: flex
-	align-items: center
-	justify-content: center
+	// display: flex
+	// align-items: center
+	// justify-content: center
 	height: 100px
 	border-bottom: solid #565656 1px
 	width: 100%
