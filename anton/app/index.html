@@ -259,6 +259,20 @@
 	<script type="text/javascript" src="js/libs/counting/jquery.counterup.min.js"></script>
 
 	<script type="text/javascript">
+		
+		function detectEvent() {
+			if ('ontouchstart' in window) {
+		        eventType = 'touchstart';
+		    } else if (window.navigator.pointerEnabled) {
+		        eventType = 'pointerdown';
+		    } else if (window.navigator.msPointerEnabled) {
+		        eventType = 'MSPointerDown';
+		    } else {
+		        eventType = 'click';
+		    }
+		    return eventType;
+		}
+
 		$(document).ready(function() {
 
 			var winWidth = $( window ).width();
@@ -277,22 +291,24 @@
 			// кнопочка для закрытия описания на мобильниках
 			var mobBtn = $('.mobile-switch');
 			
-			mainBlock.click(function(event) {
+			var currentEvent = detectEvent();
+
+			mainBlock.on(currentEvent, function(event) {
 				var discrBlock = $(this).find('.au-discr');
 				var offset = $(this).offset();
 
-				if (discrBlock.css('opacity') == 1) {
-					discrBlock.css('opacity', 0);
+				if (discrBlock.css('display') == 'flex') {
+					discrBlock.css('display', 'none');
 					return false;
 				}
 				discrBlock.css({
-					'opacity': 1,
+					'display': 'flex',
 					'z-index': 9999,
 					'width': winWidth + 'px',
 					'left':'-' + offset.left + 'px' //присваиваем оранжевому блоку позицию родительского с отрицательным знаком, т.е. прижимаем к самому краю страницы
 				});
-
 			});
+
 
 			// // тут просто на ховере муваем наши оранжевые блоки и задаем им ширину во весь экран
 			// mainBlock.hover(function(event){
