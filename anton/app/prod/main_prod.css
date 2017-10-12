@@ -51,11 +51,6 @@
   margin: 17px 0;
 }
 
-.about-u:hover > .au-discr {
-  opacity: 1;
-  z-index: 9999;
-}
-
 .skills-title p {
   font-size: 1.5em;
 }
