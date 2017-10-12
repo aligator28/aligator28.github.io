@@ -116,7 +116,7 @@
 		<section class="row about-row" id="about">
 			<div class="mobile-switch"></div>
 			<h2 class="chapters">About us</h2>
-			<div class="col-md-3 about-u">
+			<div class="col-md-3 about-u"  id="about_1">
 				<img src="img/aboutAs/member1.png" alt="">
 				<div class="au-discr row">
 					<div class="col-md-6 col-sm-12">
@@ -278,8 +278,9 @@
 			var winWidth = $( window ).width();
 			// блок с описанием сотрудников
 			// весь блок с фото и описанием сотрудников
-			var mainBlock = $('.about-u');
-			
+			// var mainBlock = $('.about-u');
+			var mainBlockImg = $('.about-u img');
+
 			var allowedWidthForMobile = 768;
 
 			//установки для счетчиков в разделе About Us
@@ -293,10 +294,12 @@
 			
 			var currentEvent = detectEvent();
 
-			mainBlock.on(currentEvent, function(event) {
-				alert(currentEvent);
-				var discrBlock = $(this).find('.au-discr');
-				var offset = $(this).offset();
+			mainBlockImg.on(currentEvent, function(event) {
+
+				var parentBlock = $(this).parent();
+
+				var discrBlock = parentBlock.find('.au-discr');
+				var offset = parentBlock.offset();
 
 				if (discrBlock.css('display') == 'flex') {
 					discrBlock.css('display', 'none');
